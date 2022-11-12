@@ -1,6 +1,8 @@
-from random import randint
 from math import *
+from random import randint
+
 import matplotlib.pyplot as plt
+
 
 def alea(a, b):
     x = randint(a, b)
