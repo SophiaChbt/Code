@@ -41,7 +41,7 @@ def draft(tab): # Renvoie un tableau avec un cadre de case morte en plus
     tab2 = [['. ']*(n+2)] + tab2 + [['. ']*(n+2)]
     return tab2
 
-def compare(tab1,tab2): # Compare 2 tableau en enlevant les case de test à la deepcopy
+def compare(tab1,tab2): # Compare 2 tableau en enlevant les case de test de8 la deepcopy
     global arret
     for i in range(len(tab1)):
         ligne = []
@@ -66,7 +66,7 @@ def compte(t,ligne,colonne): # Comptage de cases vivantes
             count += 1
     return count
 
-def next_generation(tab): # Calcul des génération de la colonie
+def next_generation(tab): # Calcul des gï¿½nï¿½ration de la colonie
     global arret    
     copie = deepcopy(tab)
     t = draft(copie)
@@ -78,7 +78,7 @@ def next_generation(tab): # Calcul des génération de la colonie
                 tab[i][j] = 'X '
     compare(copie,tab)
 
-def jeu_de_la_vie(): # Calcul et affichage des générations
+def jeu_de_la_vie(): # Calcul et affichage des gï¿½nï¿½rations
     global arret
     arret = False
     while arret == False:
@@ -86,7 +86,7 @@ def jeu_de_la_vie(): # Calcul et affichage des générations
             next_generation(tab)
             affichage(tab)
     if arret == True:
-        print("La colonie n'évolue plus, entrez 'jeu_de_la_vie()' pour recommencer le jeu :D")
+        print("La colonie n'ï¿½volue plus, entrez 'jeu_de_la_vie()' pour recommencer le jeu :D")
 
 #Initialisation de la grille
 n = int(input("Choisissez la taille de la grille: "))
@@ -96,7 +96,7 @@ affichage(tab)
 
 #Choix d'initialisation de colonie
 print("Comment voulez-vous initialiser la colonie?")
-print("  1.carré")
+print("  1.carrï¿½")
 print("  2.diagonales en X")
 print("  3.croix en +")
 mode = input("ENTREZ CHIFFRE: ")
